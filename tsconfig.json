@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "declaration": true,
     "module": "commonjs",
     "target": "ES2021",
@@ -17,13 +18,10 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "outDir": "dist",
-    "baseUrl": ".",
     "types": ["node", "jest"],
     "paths": {
       "@sundajs/common" : ["./pkg/common"],
-      "@sundajs/common/*" : ["./pkg/common/*"],
-      "@sundajs/core": ["./pkg/core"],
-      "@sundajs/core/*": ["./pkg/core/*"]
+      "@sundajs/common/*" : ["./pkg/common/*"]
     }
   },
   "include": ["pkg/**/*"],

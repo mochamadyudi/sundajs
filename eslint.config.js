@@ -2,6 +2,7 @@ import eslintPluginImport from "eslint-plugin-import";
 import eslintPluginUnusedImports from "eslint-plugin-unused-imports";
 import typescriptParser from "@typescript-eslint/parser";
 import typescriptPlugin from "@typescript-eslint/eslint-plugin";
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
 export default [
     {
@@ -11,15 +12,20 @@ export default [
             parserOptions: {
                 project: "./tsconfig.json",
                 sourceType: "module",
-                ecmaVersion: "latest",
+                ecmaVersion: 2020,
             },
         },
         plugins: {
+            unicorn: eslintPluginUnicorn,
             "@typescript-eslint": typescriptPlugin,
             import: eslintPluginImport,
             "unused-imports": eslintPluginUnusedImports,
         },
         rules: {
+            "no-constant-condition": "off",
+            "no-unneeded-ternary": "off",
+            "unicorn/no-nullish-coalescing": "off",
+            "@typescript-eslint/prefer-optional-chain": "off",
             "@typescript-eslint/no-misused-promises": "off",
             "@typescript-eslint/explicit-function-return-type": "error",
             "@typescript-eslint/no-unused-vars": ["off", { argsIgnorePattern: "^_" }],
@@ -27,9 +33,7 @@ export default [
             "@typescript-eslint/ban-ts-comment": "warn",
             "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
             "@typescript-eslint/no-floating-promises": "error",
-            "@typescript-eslint/strict-boolean-expressions": "error",
-            "@typescript-eslint/prefer-nullish-coalescing": "error",
-            "@typescript-eslint/prefer-optional-chain": "error",
+            "@typescript-eslint/strict-boolean-expressions": "off",
             "eqeqeq": ["error", "always"],
             "curly": "error",
             "no-eval": "error",

@@ -25,7 +25,7 @@ const candakAwalanMetadata = (): PamundutMappingMetadata => {
  * @constructor
  */
 export const PamundutMapping = (metadata: PamundutMappingMetadata = candakAwalanMetadata()): MethodDecorator => {
-  const jalurMetadata = metadata[JALUR_METADATA];
+  const jalurMetadata = metadata[JALUR_METADATA] ?? null;
   const jalur = jalurMetadata && jalurMetadata.length ? jalurMetadata : '/';
   const method = metadata[METHOD_METADATA] || PamundutMethod.Candak;
 

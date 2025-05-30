@@ -6,7 +6,11 @@
     "build": "tsc -b -v pkg",
     "clean": "tsc -b --clean pkg",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "prepare": "husky",
+    "sample:install": "gulp sample:install",
+    "move:sample": "gulp move:sample",
+    "move:node_modules": "gulp move:node_modules",
+    "build:install:sample": "npm run build && npm run sample:install"
   },
   "author": "Mochamad Yudi <myudisobari12@gmail.com>",
   "license": "MIT",
@@ -17,10 +21,12 @@
     "uuid": "^11.1.0"
   },
   "devDependencies": {
+    "@types/gulp": "^4.0.17",
     "@typescript-eslint/eslint-plugin": "^8.33.0",
     "@typescript-eslint/parser": "^8.33.0",
     "delete-empty": "^3.0.0",
     "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-unicorn": "^59.0.1",
     "eslint-plugin-unused-imports": "^4.1.4",
     "fancy-log": "^2.0.0",
     "gulp": "^5.0.0",
