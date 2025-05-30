@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "target": "ES2021",
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "allowJs": false,
+    "strict": true,
+    "useUnknownInCatchVariables": false,
+    "noImplicitAny": false,
+    "removeComments": false,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "forceConsistentCasingInFileNames": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "types": ["node", "jest"],
+    "paths": {
+      "@sundajs/common" : ["./pkg/common"],
+      "@sundajs/common/*" : ["./pkg/common/*"],
+      "@sundajs/core": ["./pkg/core"],
+      "@sundajs/core/*": ["./pkg/core/*"]
+    }
+  },
+  "include": ["pkg/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
+}
