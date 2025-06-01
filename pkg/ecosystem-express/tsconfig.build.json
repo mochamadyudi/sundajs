@@ -1,0 +1,22 @@
+{
+  "extends": "../tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": ".",
+    "rootDir": ".",
+    "paths": {
+      "@sundajs/common": ["../common"],
+      "@sundajs/common/*": ["../common/*"],
+      "@sundajs/core": ["../core"],
+      "@sundajs/core/*": ["../core/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "*.test.ts"],
+  "references": [
+    {
+      "path": "../common/tsconfig.build.json"
+    },
+    {
+      "path": "../core/tsconfig.build.json"
+    }
+  ]
+}
