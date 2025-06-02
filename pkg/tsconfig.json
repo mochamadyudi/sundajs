@@ -3,6 +3,12 @@
   "references": [
     {
       "path": "./common/tsconfig.build.json"
-    }
+    },
+    {
+      "path": "./core/tsconfig.build.json"
+    },
+    {
+      "path": "./ecosystem-express/tsconfig.build.json"
+    },
   ]
 }
