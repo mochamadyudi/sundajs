@@ -52,25 +52,6 @@ const ngieunMappingDecorator = (method: PamundutMethod) => {
   }
 };
 
-
-// export const Cokot = ngieunMappingDecorator(RequestMethod.GET);
-// export const Candak = ngieunMappingDecorator(RequestMethod.GET);
-// export const Kirim = ngieunMappingDecorator(RequestMethod.POST);
-// export const Gentos = ngieunMappingDecorator(RequestMethod.PUT);
-// export const Hapus = ngieunMappingDecorator(RequestMethod.DELETE);
-// export const Tambar = ngieunMappingDecorator(RequestMethod.PATCH);
-// export const Sadayana = ngieunMappingDecorator(RequestMethod.ALL);
-// export const Pilihan = ngieunMappingDecorator(RequestMethod.HEAD);
-// export const Sirah = ngieunMappingDecorator(RequestMethod.SEARCH);
-// export const Pilarian = ngieunMappingDecorator(RequestMethod.OPTIONS);
-// export const MilarianSipat = ngieunMappingDecorator(RequestMethod.PROPFIND);
-// export const TambahSipat = ngieunMappingDecorator(RequestMethod.PROPPATCH);
-// export const JieunFolder = ngieunMappingDecorator(RequestMethod.MKCOL);
-// export const Salin = ngieunMappingDecorator(RequestMethod.COPY);
-// export const Konci  = ngieunMappingDecorator(RequestMethod.MOVE);
-// export const BukaKonci = ngieunMappingDecorator(RequestMethod.LOCK);
-// export const Pindah = ngieunMappingDecorator(RequestMethod.UNLOCK);
-
 export const Candak = ngieunMappingDecorator(PamundutMethod.Candak);
 export const Kirim = ngieunMappingDecorator(PamundutMethod.Kirim);
 export const Gentos = ngieunMappingDecorator(PamundutMethod.Gentos);
