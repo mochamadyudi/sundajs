@@ -4,3 +4,8 @@
 node_modules
 
 /**/*.tsbuildinfo
+/**/node_modules
+/**/**/node_modules
+
+./samples
+./samples/*

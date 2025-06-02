@@ -10,17 +10,21 @@
     "sample:install": "gulp sample:install",
     "move:sample": "gulp move:sample",
     "move:node_modules": "gulp move:node_modules",
-    "build:install:sample": "npm run build && npm run sample:install"
+    "build:install:sample": "npm run build && npm run sample:install",
+    "start:sample": "ts-node samples/index.ts",
+    "build:start-sample": "npm run build && npm run move:node_modules && npm run clean && npm run start:sample"
   },
   "author": "Mochamad Yudi <myudisobari12@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "ansis": "^4.1.0",
+    "express": "^5.1.0",
     "rxjs": "^7.8.2",
     "uid": "^2.0.2",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
+    "@types/express": "^5.0.2",
     "@types/gulp": "^4.0.17",
     "@typescript-eslint/eslint-plugin": "^8.33.0",
     "@typescript-eslint/parser": "^8.33.0",
