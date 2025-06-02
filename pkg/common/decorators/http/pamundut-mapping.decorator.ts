@@ -21,17 +21,17 @@ const candakAwalanMetadata = (): PamundutMappingMetadata => {
 /**
  * @name PamundutMapping
  * @description - mapping kanggo ngadefinisikeun ngieun pamundut
- * @param {PamundutMethod} metadata
+ * @param {RequestMethod} metadata
  * @constructor
  */
 export const PamundutMapping = (metadata: PamundutMappingMetadata = candakAwalanMetadata()): MethodDecorator => {
-  const jalurMetadata = metadata[JALUR_METADATA] ?? null;
-  const jalur = jalurMetadata && jalurMetadata.length ? jalurMetadata : '/';
-  const method = metadata[METHOD_METADATA] || PamundutMethod.Candak;
+  const pathMetadata = metadata[JALUR_METADATA];
+  const path = pathMetadata && pathMetadata.length ? pathMetadata: '/';
+  const requestMethod = metadata[METHOD_METADATA] || PamundutMethod.Candak;
 
-  return (target: object, konci: string | symbol, descriptor: TypedPropertyDescriptor<any>) => {
-    Reflect.defineMetadata(JALUR_METADATA, jalur, descriptor.value);
-    Reflect.defineMetadata(METHOD_METADATA, method, descriptor.value);
+  return ( target: object, key: string | symbol, descriptor: TypedPropertyDescriptor<any>) => {
+    Reflect.defineMetadata(JALUR_METADATA, path, descriptor.value);
+    Reflect.defineMetadata(METHOD_METADATA, requestMethod, descriptor.value);
     return descriptor;
   }
 }
@@ -42,14 +42,34 @@ export const PamundutMapping = (metadata: PamundutMappingMetadata = candakAwalan
  * @param method
  */
 const ngieunMappingDecorator = (method: PamundutMethod) => {
-  return (jalur?: string | string[]): MethodDecorator => {
+  return (path?: string | string[]): MethodDecorator => {
     const metadata = {
-      [JALUR_METADATA]: jalur,
+      [JALUR_METADATA]: path,
       [METHOD_METADATA]: method
     } as PamundutMappingMetadata;
+
     return PamundutMapping(metadata);
   }
 };
+
+
+// export const Cokot = ngieunMappingDecorator(RequestMethod.GET);
+// export const Candak = ngieunMappingDecorator(RequestMethod.GET);
+// export const Kirim = ngieunMappingDecorator(RequestMethod.POST);
+// export const Gentos = ngieunMappingDecorator(RequestMethod.PUT);
+// export const Hapus = ngieunMappingDecorator(RequestMethod.DELETE);
+// export const Tambar = ngieunMappingDecorator(RequestMethod.PATCH);
+// export const Sadayana = ngieunMappingDecorator(RequestMethod.ALL);
+// export const Pilihan = ngieunMappingDecorator(RequestMethod.HEAD);
+// export const Sirah = ngieunMappingDecorator(RequestMethod.SEARCH);
+// export const Pilarian = ngieunMappingDecorator(RequestMethod.OPTIONS);
+// export const MilarianSipat = ngieunMappingDecorator(RequestMethod.PROPFIND);
+// export const TambahSipat = ngieunMappingDecorator(RequestMethod.PROPPATCH);
+// export const JieunFolder = ngieunMappingDecorator(RequestMethod.MKCOL);
+// export const Salin = ngieunMappingDecorator(RequestMethod.COPY);
+// export const Konci  = ngieunMappingDecorator(RequestMethod.MOVE);
+// export const BukaKonci = ngieunMappingDecorator(RequestMethod.LOCK);
+// export const Pindah = ngieunMappingDecorator(RequestMethod.UNLOCK);
 
 export const Candak = ngieunMappingDecorator(PamundutMethod.Candak);
 export const Kirim = ngieunMappingDecorator(PamundutMethod.Kirim);
