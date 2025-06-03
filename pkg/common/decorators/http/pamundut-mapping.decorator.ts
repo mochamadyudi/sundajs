@@ -52,6 +52,10 @@ const ngieunMappingDecorator = (method: PamundutMethod) => {
   }
 };
 
+/**
+ * @name Candak
+ * @description Decorator pikeun nga
+ */
 export const Candak = ngieunMappingDecorator(PamundutMethod.Candak);
 export const Kirim = ngieunMappingDecorator(PamundutMethod.Kirim);
 export const Gentos = ngieunMappingDecorator(PamundutMethod.Gentos);
