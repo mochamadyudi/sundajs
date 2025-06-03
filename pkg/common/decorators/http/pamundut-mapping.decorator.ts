@@ -54,21 +54,95 @@ const ngieunMappingDecorator = (method: PamundutMethod) => {
 
 /**
  * @name Candak
- * @description Decorator pikeun nga
+ * @description Mapping decorator kanggo method HTTP "Candak" (GET)
  */
 export const Candak = ngieunMappingDecorator(PamundutMethod.Candak);
+/**
+ * @name Kirim
+ * @description Mapping decorator kanggo method HTTP "Kirim" (POST)
+ */
 export const Kirim = ngieunMappingDecorator(PamundutMethod.Kirim);
+
+/**
+ * @name Gentos
+ * @description Mapping decorator kanggo method HTTP "Gentos" (PUT)
+ */
 export const Gentos = ngieunMappingDecorator(PamundutMethod.Gentos);
+
+/**
+ * @name Hapus
+ * @description Mapping decorator kanggo method HTTP "Hapus" (DELETE)
+ */
 export const Hapus = ngieunMappingDecorator(PamundutMethod.Hapus);
+
+/**
+ * @name Tambar
+ * @description Mapping decorator kanggo method HTTP "Tambar" (PATCH)
+ */
 export const Tambar = ngieunMappingDecorator(PamundutMethod.Tambar);
+
+/**
+ * @name Sadayana
+ * @description Mapping decorator kanggo method HTTP "Sadayana" (ALL)
+ */
 export const Sadayana = ngieunMappingDecorator(PamundutMethod.Sadayana);
+
+/**
+ * @name Pilihan
+ * @description Mapping decorator kanggo method HTTP "Pilihan" (OPTIONS)
+ */
 export const Pilihan = ngieunMappingDecorator(PamundutMethod.Pilihan);
+
+/**
+ * @name Sirah
+ * @description Mapping decorator kanggo method HTTP "Sirah" (HEAD)
+ */
 export const Sirah = ngieunMappingDecorator(PamundutMethod.Sirah);
+
+/**
+ * @name Pilarian
+ * @description Mapping decorator kanggo method HTTP "Pilarian" (SEARCH)
+ */
 export const Pilarian = ngieunMappingDecorator(PamundutMethod.Pilarian);
+
+/**
+ * @name MilarianSipat
+ * @description Mapping decorator kanggo method HTTP "MilarianSipat" (PROPFIND)
+ */
 export const MilarianSipat = ngieunMappingDecorator(PamundutMethod.MilarianSipat);
+
+/**
+ * @name TambahSipat
+ * @description Mapping decorator kanggo method HTTP "TambahSipat" (PROPPATCH)
+ */
 export const TambahSipat = ngieunMappingDecorator(PamundutMethod.TambahSipat);
+
+/**
+ * @name JieunFolder
+ * @description Mapping decorator kanggo method HTTP "JieunFolder" (MKCOL)
+ */
 export const JieunFolder = ngieunMappingDecorator(PamundutMethod.JieunFolder);
+
+/**
+ * @name Salin
+ * @description Mapping decorator kanggo method HTTP "Salin" (COPY)
+ */
 export const Salin = ngieunMappingDecorator(PamundutMethod.Salin);
+
+/**
+ * @name Konci
+ * @description Mapping decorator kanggo method HTTP "Konci" (LOCK)
+ */
 export const Konci  = ngieunMappingDecorator(PamundutMethod.Konci);
+
+/**
+ * @name BukaKonci
+ * @description Mapping decorator kanggo method HTTP "BukaKonci" (UNLOCK)
+ */
 export const BukaKonci = ngieunMappingDecorator(PamundutMethod.BukaKonci);
+
+/**
+ * @name Pindah
+ * @description Mapping decorator kanggo method HTTP "Pindah" (MOVE)
+ */
 export const Pindah = ngieunMappingDecorator(PamundutMethod.Pindah);
